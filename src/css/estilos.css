@@ -1,0 +1,278 @@
+body {
+    margin: 0;
+    font-family: 'Patrick Hand', cursive; /* Fonte com estilo manuscrito */
+    background: linear-gradient(to right, #bc63f7d0, #941a61); /* Fundo pastel */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    min-height: 100vh; /* Ocupa a altura total da tela */
+}
+
+.logo-container {
+    width: 100%;
+    text-align: center;
+}
+
+.logo {
+    max-width: 200px; /* Ajuste o tamanho máximo da logo conforme necessário */
+    height: auto; /* Mantém a proporção da imagem */
+    display: inline-block;
+}
+
+.presentation {
+    max-width: 800px;
+    width: 100%;
+    text-align: center;
+    margin-top: 5vh; /* Centraliza verticalmente a apresentação */
+    margin-bottom: 15vh; /* Espaço grande abaixo para colocar os portfólios fora da vista inicial */
+    background: #fff;
+    border-radius: 15px;
+    padding: 40px;
+    box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
+    border: 3px solid #ffd1a1; /* Bordas que imitam papel */
+}
+
+.presentation h1 {
+    font-size: 3em;
+    color: #333;
+    margin-bottom: 25px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1); /* Efeito de sombra leve */
+}
+
+.intro {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 20px;
+}
+
+.intro p {
+    color: #444;
+    font-size: 1.2em;
+    line-height: 1.8;
+    max-width: 600px;
+}
+
+.scroll-link {
+    color: #ff7e5f;
+    font-weight: bold;
+    text-decoration: none;
+    border-bottom: 2px dashed #ff7e5f;
+    transition: color 0.3s ease-in-out, border-bottom 0.3s ease-in-out;
+}
+
+.scroll-link:hover {
+    color: #feb47b;
+    border-bottom: 2px solid #feb47b;
+}
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    margin-top: 30px;
+}
+
+.social-link {
+    text-align: center;
+    text-decoration: none;
+    color: #444;
+    transition: transform 0.3s ease-in-out;
+}
+
+.social-link:hover {
+    transform: translateY(-5px); /* Efeito de leve flutuação ao passar o mouse */
+}
+
+.social-icon {
+    width: 70px;
+    height: 70px;
+    border-radius: 10px;
+    background: #ffe0b2;
+    padding: 0px;
+    box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
+}
+
+.social-link span {
+    display: block;
+    margin-top: 10px;
+    font-size: 1.2em;
+    color: #000000;
+}
+
+.portfolio-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    max-width: 1000px;
+    width: 100%;
+    margin-top: 50px;
+    padding-top: 50px;
+    margin-bottom: 150px;
+}
+
+.portfolio-item {
+    position: relative;
+    background-color: #fff;
+    cursor: pointer;
+    overflow: hidden;
+    border-radius: 15px;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.1);
+    border: 3px solid #ffd1a1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.portfolio-item:hover {
+    transform: translateY(-5px); /* Efeito de leve flutuação */
+    box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
+}
+
+.portfolio-content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: opacity 0.3s ease-in-out;
+    padding: 10px; /* Adiciona algum padding interno para o texto */
+    box-sizing: border-box;
+}
+
+.portfolio-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: opacity 0.4s ease-in-out;
+}
+
+.default-img {
+    opacity: 1;
+}
+
+.hover-img {
+    opacity: 0;
+}
+
+.portfolio-item:hover .default-img {
+    opacity: 0;
+}
+
+.portfolio-item:hover .hover-img {
+    opacity: 1;
+}
+
+.portfolio-name {
+    position: relative;
+    z-index: 1;
+    color: rgba(0, 0, 0, 0.8);
+    font-size: 1.2em; /* Ajusta o tamanho da fonte */
+    font-weight: bold;
+    opacity: 0;
+    transition: opacity 0.4s ease-in-out;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+    word-break: break-word; /* Permite que o texto quebre em palavras longas */
+}
+
+.view-project {
+    position: relative;
+    z-index: 1;
+    color: rgba(0, 0, 0, 0.8);
+    font-size: 1em; /* Ajusta o tamanho da fonte */
+    margin-top: 10px;
+    opacity: 0;
+    transition: opacity 0.4s ease-in-out;
+}
+
+.portfolio-item:hover .portfolio-name,
+.portfolio-item:hover .view-project {
+    opacity: 1;
+}
+
+.portfolio-item::before {
+    content: '';
+    display: block;
+    padding-bottom: 100%;
+    background: #ffe0b2;
+    border-radius: 15px 0 15px 0;
+}
+
+
+:root {
+    --random-angle: calc(5 + (20 - 5) * random());
+}
+
+/* Responsividade */
+
+@media (max-width: 768px) {
+    .presentation {
+        padding: 20px;
+        font-size: 0.9em;
+    }
+
+    .presentation h1 {
+        font-size: 2.5em;
+    }
+
+    .intro p {
+        font-size: 1.1em;
+    }
+
+    .social-links {
+        gap: 20px;
+        flex-wrap: wrap;
+    }
+
+    .social-link span {
+        font-size: 1em;
+    }
+
+    .social-icon {
+        width: 40px;
+        height: 40px;
+    }
+}
+
+@media (max-width: 480px) {
+    .presentation {
+        padding: 15px;
+        font-size: 0.8em;
+    }
+
+    .presentation h1 {
+        font-size: 2em;
+    }
+
+    .intro p {
+        font-size: 1em;
+    }
+
+    .social-links {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .social-icon {
+        width: 35px;
+        height: 35px;
+    }
+}
+
+
+
+
+
+
+
+

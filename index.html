@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="./src/css/estilos.css">
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+</head>
+<body>
+        <!-- Logo -->
+        <div class="logo-container">
+            <img src="./src/imagens/logo.png" alt="Minha Logo" class="logo">
+        </div>
+    <!-- Seção de Apresentação -->
+    <div class="presentation">
+        <h1>Olá, Me chamo Hugo</h1>
+        <div class="intro">
+            <p>Com uma forte paixão por tecnologia, estou sempre em busca de novos desafios e aprendizados. Minha jornada é impulsionada pela curiosidade e pela vontade de expandir meus conhecimentos em diferentes linguagens e técnicas. Estou comprometido em evoluir continuamente e em trazer soluções inovadoras para problemas complexos.</p>
+            <p>Tecnologias que eu uso no meu dia a dia: Python, HTML, CSS, Jv, React e PHP. Para descobrir mais  <a href="#portfolio-section" class="scroll-link">Veja meus projetos</a>.</p>
+        </div>
+    </div>
+
+        <!-- Links para Redes Sociais -->
+        <div class="social-links">
+            <a href="https://www.instagram.com/hugo_o.dev/" target="_blank" class="social-link" data-aos="fade-up" data-aos-delay="100">
+                <img src="./src/imagens/logo_insta-removebg.png" alt="Instagram" class="social-icon">
+                <span>Instagram</span>
+            </a>
+            <a href="https://github.com/calvethugo" target="_blank" class="social-link" data-aos="fade-up" data-aos-delay="200">
+                <img src="./src/imagens/github_logo-removebg-preview.png" alt="GitHub" class="social-icon">
+                <span>GitHub</span>
+            </a>
+        </div>
+    </div>
+    
+<!-- Seção de Portfólios -->
+<div id="portfolio-section" class="portfolio-container">
+
+    <div class="portfolio-item" onclick="window.location.href='https://calvethugo.github.io/Dev-notes/'" data-aos="fade-up" data-aos="fade-up">
+        <div class="portfolio-content">
+            <img src="./src/imagens/devnote.png" alt="Nome 2" class="portfolio-img default-img">
+            <!-- <img src="foto2-hover.gif" alt="Nome 2" class="portfolio-img hover-img"> -->
+            <span class="portfolio-name">Dev-notes</span>
+            <span class="view-project">Ver Projeto</span>
+        </div>
+    </div>
+    <div class="portfolio-item" onclick="window.location.href='https://calvethugo.github.io/to-do-list/'" data-aos="fade-up" data-aos-delay="100">
+        <div class="portfolio-content">
+            <img src="./src/imagens/todolist.png" alt="Nome 3" class="portfolio-img default-img">
+            <!-- <img src="foto3-hover.gif" alt="Nome 3" class="portfolio-img hover-img"> -->
+            <span class="portfolio-name">To-Do-List</span>
+            <span class="view-project">Ver Projeto</span>
+        </div>
+    </div>
+    <div class="portfolio-item" onclick="window.location.href='https://calvethugo.github.io/gerador-de-Box-Shadow/'" data-aos="fade-up" data-aos-delay="200">
+        <div class="portfolio-content">
+            <img src="./src/imagens/geradorbox.png" alt="Nome 4" class="portfolio-img default-img">
+            <!-- <img src="foto4-hover.gif" alt="Nome 4" class="portfolio-img hover-img"> -->
+            <span class="portfolio-name">Gerador-De-Box-Shadow</span>
+            <span class="view-project">Ver Projeto</span>
+        </div>
+    </div>
+    <div class="portfolio-item" onclick="window.location.href='https://calvethugo.github.io/gerador-de-senha/'" data-aos="fade-up" data-aos-delay="300">
+        <div class="portfolio-content">
+            <img src="./src/imagens/Screenshot_1.png" alt="Nome 5" class="portfolio-img default-img">
+            <!-- <img src="foto5-hover.gif" alt="Nome 5" class="portfolio-img hover-img"> -->
+            <span class="portfolio-name">Gerador-De-Senha</span>
+            <span class="view-project">Ver Projeto</span>
+        </div>
+    </div>
+    <div class="portfolio-item" onclick="window.location.href='https://calvethugo.github.io/gerdor-de-QR-code/'" data-aos="fade-up" data-aos-delay="400">
+        <div class="portfolio-content">
+            <img src="./src/imagens/Screenshot_2.png" alt="Nome 5" class="portfolio-img default-img">
+            <!-- <img src="foto5-hover.gif" alt="Nome 5" class="portfolio-img hover-img"> -->
+            <span class="portfolio-name">Gerdor-de-QR-Code</span>
+            <span class="view-project">Ver Projeto</span>
+        </div>
+    </div>
+    <div class="portfolio-item" onclick="window.location.href='https://calvethugo.github.io/Tabuada/'"data-aos="fade-up" data-aos-delay="500">
+        <div class="portfolio-content">
+            <img src="./src/imagens/tabuada.png" alt="Nome 1" class="portfolio-img default-img">
+            <!-- <img src="./src/imagens/shinji.jpg" alt="Nome 1" class="portfolio-img hover-img"> -->
+            <span class="portfolio-name">Tabuada</span>
+            <span class="view-project">Ver Projeto</span>
+        </div>
+    </div>
+</div>
+
+
+    <script>
+        // Suavizar o scroll para a seção de portfólios
+        document.querySelector('.scroll-link').addEventListener('click', function(e) {
+            e.preventDefault();
+            document.querySelector(this.getAttribute('href')).scrollIntoView({
+                behavior: 'smooth'
+            });
+        });
+    </script>
+
+   <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+   <script>
+     AOS.init();
+   </script>
+   
+</body>
+</html>
+
+
